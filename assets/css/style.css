@@ -12,6 +12,11 @@ body {
 .hidden {
   display: none;
 }
+
+.hidden-view {
+  visibility: none;
+  opacity: 0;
+}
 .title-content {
   position: relative;
   text-align: center;
@@ -20,7 +25,6 @@ body {
 }
 
 .container {
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -152,6 +156,7 @@ body {
   transform: scale(1.05);
   transition-duration: 0.4s;
 }
+
 .container-content {
   display: flex;
   flex-direction: row;
@@ -326,5 +331,86 @@ aside {
   }
   .swiper-button-next {
     right: -1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #content {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .back-button {
+    position: static;
+    padding: 10px 20px;
+    font-size: larger;
+    font-weight: 200;
+    top: 3rem;
+    left: 7rem;
+    border: solid black 1px;
+    border-radius: 10px;
+    background-color: firebrick;
+    color: #fff;
+    cursor: pointer;
+  }
+  article {
+    order: 1;
+  }
+
+  aside {
+    order: 2;
+    margin-top: 20px;
+  }
+  .container-content {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .left-content div img {
+    margin-right: 70px;
+    margin-bottom: 20px;
+  }
+  .left-content div ul {
+    margin-right: 70px;
+  }
+
+  .left-content img {
+    max-width: 75%;
+  }
+  .left-content ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    transition: left 0.3s;
+  }
+
+  .left-content ul li a {
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-weight: 600;
+    color: #333;
+    transition: 0.3s;
+  }
+
+  .left-content ul li a:hover {
+    border-top-color: #333;
+    border-bottom-color: #333;
+    color: #333;
+  }
+
+  .right-content {
+    margin: 30px 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .title {
+    font-size: 30px;
   }
 }

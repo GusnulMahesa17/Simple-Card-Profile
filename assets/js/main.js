@@ -27,16 +27,18 @@ let swiperCards = new Swiper(".card__content", {
 
 /*=====DOM PROFILE MODEL====*/
 function hideProfile() {
-  let contentSection = document.getElementById("content");
+  let contentSection = document.querySelector(".content-sec");
 
-  contentSection.style.display = "none";
+  contentSection.classList.add("hidden");
 }
 
 function hideSection1() {
   let profileSection = document.querySelector(".container");
+  let titleContent = document.querySelector(".title-content");
   let bodyElement = document.body;
   profileSection.classList.add("hidden");
-  const html = `<div id="content">
+  titleContent.classList.add("hidden");
+  const html = `<div class="content-sec"> <div id="content">
   <div><button class="back-button" id="backButton">⬅Back</button></div>
   <article>
     <div class="container-content">
@@ -101,20 +103,24 @@ function hideSection1() {
       </section>
     </article>
   </aside>
-</div>`;
+</div></div>`;
   bodyElement.insertAdjacentHTML("afterbegin", html);
   document.getElementById("backButton").addEventListener("click", function () {
     let profileSection = document.querySelector(".container");
-
+    let titleContent = document.querySelector(".title-content");
     profileSection.classList.remove("hidden");
+    titleContent.classList.remove("hidden");
     hideProfile();
   });
 }
+
 function hideSection2() {
   let profileSection = document.querySelector(".container");
+  let titleContent = document.querySelector(".title-content");
   let bodyElement = document.body;
   profileSection.classList.add("hidden");
-  const html = `<div id="content">
+  titleContent.classList.add("hidden");
+  const html = `<div class="content-sec"> <div id="content">
   <div><button class="back-button" id="backButton">⬅Back</button></div>
   <article>
     <div class="container-content">
@@ -179,20 +185,23 @@ function hideSection2() {
       </section>
     </article>
   </aside>
-</div>`;
+</div></div>`;
   bodyElement.insertAdjacentHTML("afterbegin", html);
   document.getElementById("backButton").addEventListener("click", function () {
     let profileSection = document.querySelector(".container");
-
+    let titleContent = document.querySelector(".title-content");
     profileSection.classList.remove("hidden");
+    titleContent.classList.remove("hidden");
     hideProfile();
   });
 }
 function hideSection3() {
   let profileSection = document.querySelector(".container");
+  let titleContent = document.querySelector(".title-content");
   let bodyElement = document.body;
   profileSection.classList.add("hidden");
-  const html = `<div id="content">
+  titleContent.classList.add("hidden");
+  const html = `<div class="content-sec"><div id="content">
   <div><button class="back-button" id="backButton">⬅Back</button></div>
   <article>
     <div class="container-content">
@@ -257,20 +266,23 @@ function hideSection3() {
       </section>
     </article>
   </aside>
-</div>`;
+</div></div>`;
   bodyElement.insertAdjacentHTML("afterbegin", html);
   document.getElementById("backButton").addEventListener("click", function () {
     let profileSection = document.querySelector(".container");
-
+    let titleContent = document.querySelector(".title-content");
     profileSection.classList.remove("hidden");
+    titleContent.classList.remove("hidden");
     hideProfile();
   });
 }
 function hideSection4() {
   let profileSection = document.querySelector(".container");
+  let titleContent = document.querySelector(".title-content");
   let bodyElement = document.body;
   profileSection.classList.add("hidden");
-  const html = `<div id="content">
+  titleContent.classList.add("hidden");
+  const html = `<div class="content-sec"><div id="content">
   <div><button class="back-button" id="backButton">⬅Back</button></div>
   <article>
     <div class="container-content">
@@ -335,20 +347,23 @@ function hideSection4() {
       </section>
     </article>
   </aside>
-</div>`;
+</div></div>`;
   bodyElement.insertAdjacentHTML("afterbegin", html);
   document.getElementById("backButton").addEventListener("click", function () {
     let profileSection = document.querySelector(".container");
-
+    let titleContent = document.querySelector(".title-content");
     profileSection.classList.remove("hidden");
+    titleContent.classList.remove("hidden");
     hideProfile();
   });
 }
 function hideSection5() {
   let profileSection = document.querySelector(".container");
+  let titleContent = document.querySelector(".title-content");
   let bodyElement = document.body;
   profileSection.classList.add("hidden");
-  const html = `<div id="content">
+  titleContent.classList.add("hidden");
+  const html = `<div class="content-sec"><div id="content">
   <div><button class="back-button" id="backButton">⬅Back</button></div>
   <article>
     <div class="container-content">
@@ -413,12 +428,13 @@ function hideSection5() {
       </section>
     </article>
   </aside>
-</div>`;
+</div></div>`;
   bodyElement.insertAdjacentHTML("afterbegin", html);
   document.getElementById("backButton").addEventListener("click", function () {
     let profileSection = document.querySelector(".container");
-
+    let titleContent = document.querySelector(".title-content");
     profileSection.classList.remove("hidden");
+    titleContent.classList.remove("hidden");
     hideProfile();
   });
 }
